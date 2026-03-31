@@ -1,1 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+*.local
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Tooling caches
+.vite/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Test / coverage
+coverage/
+
+# Optional local tooling
 .specstory
