@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 const IMAGES = {
-  yellow: "/hero-okay.heif",
-  green: "/hero-happy.heif",
-  blue: "/hero-sad.heif",
-  red: "/hero-angry.heif"
+  yellow: "/hero-okay.webp",
+  green: "/hero-happy.webp",
+  blue: "/hero-sad.webp",
+  red: "/hero-angry.webp"
 };
 export function Hero() {
   return (

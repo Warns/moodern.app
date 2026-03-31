@@ -28,7 +28,7 @@ export function CTA() {
 
             {/* Happy bust decoration */}
             <motion.img
-              src="/bust-happy.heif"
+              src="/bust-happy.webp"
               alt=""
               initial={{
                 opacity: 0,
