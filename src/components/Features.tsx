@@ -1,4 +1,3 @@
-import React, { Children } from 'react';
 import { motion } from 'framer-motion';
 const features = [
 {
@@ -123,12 +122,12 @@ export function Features() {
             
               <div className="relative w-24 h-24 mb-6 overflow-visible">
                 <div
-                className={`w-full h-full rounded-full ${feature.bustBg} flex items-center justify-center`}>
+                className={`w-full h-full rounded-full ${feature.bustBg} flex items-end justify-center overflow-hidden`}>
                 
                   <img
                   src={feature.bustImage}
                   alt={feature.title}
-                  className="w-20 h-20 object-cover object-top transform -translate-y-2" />
+                  className="w-20 h-20 object-cover object-top" />
                 
                 </div>
               </div>
