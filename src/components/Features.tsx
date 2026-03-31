@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import { motion } from 'framer-motion';
 const features = [
 {
-  bustImage: "/okay.heif",
+  bustImage: "/bust-okay.heif",
 
   title: 'Expressive Avatars',
   description:
@@ -11,7 +11,7 @@ const features = [
   bustBg: 'bg-mood-yellow/20'
 },
 {
-  bustImage: "/happy.heif",
+  bustImage: "/bust-happy.heif",
 
   title: 'Rich Context Tags',
   description:
@@ -20,7 +20,7 @@ const features = [
   bustBg: 'bg-mood-green/20'
 },
 {
-  bustImage: "/sad.heif",
+  bustImage: "/bust-sad.heif",
 
   title: 'Daily Journaling',
   description:
@@ -29,7 +29,7 @@ const features = [
   bustBg: 'bg-mood-blue/20'
 },
 {
-  bustImage: "/angry.heif",
+  bustImage: "/bust-angry.heif",
 
   title: 'Track Patterns',
   description:

@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 const IMAGES = {
-  yellow: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.02.heif",
-  green: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.04.heif",
-  blue: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.08.heif",
-  red: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.11.heif"
+  yellow: "/hero-okay.heif",
+  green: "/hero-happy.heif",
+  blue: "/hero-sad.heif",
+  red: "/hero-angry.heif"
 };
 export function Hero() {
   return (
@@ -44,7 +44,7 @@ export function Hero() {
                 Get it on the App Store
               </a>
               <p className="text-sm text-softgray font-medium px-4">
-                Free forever. No ads.
+                Ad-free.
               </p>
             </div>
           </motion.div>
