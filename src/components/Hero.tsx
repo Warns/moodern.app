@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 const IMAGES = {
-  yellow: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.02.png",
-
-  green: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.04.png",
-
-  blue: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.08.png",
-  red: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.11.png"
+  yellow: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.02.heif",
+  green: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.04.heif",
+  blue: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.08.heif",
+  red: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.11.heif"
 };
 export function Hero() {
   return (

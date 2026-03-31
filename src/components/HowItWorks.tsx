@@ -5,21 +5,21 @@ const steps = [
   num: '01',
   title: 'Pick your mood',
   desc: 'Swipe through the classical busts to find the one that matches how you feel right now.',
-  image: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.02.png"
+  image: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.02.heif"
 
 },
 {
   num: '02',
   title: 'Add some context',
   desc: "Select tags like Sleep, Work, or Weather to give your mood a 'why'.",
-  image: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.16.png"
+  image: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.11.16.heif"
 
 },
 {
   num: '03',
   title: 'Reflect and save',
   desc: 'Jot down a quick note and save it to your calendar to track your journey.',
-  image: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.04.png"
+  image: "/Simulator_Screenshot_-_iPhone_13_Pro_Max_-_2026-03-30_at_20.12.04.heif"
 
 }];
 
