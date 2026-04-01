@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { AppStoreBadge } from './AppStoreBadge';
 const IMAGES = {
   yellow: "/hero-okay.webp",
   green: "/hero-happy.webp",
@@ -37,12 +38,7 @@ export function Hero() {
               space designed to make you smile.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href="#"
-                className="px-8 py-4 bg-mood-green text-white rounded-full font-bold text-lg hover:bg-mood-green/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-center">
-                
-                Get it on the App Store
-              </a>
+              <AppStoreBadge />
               <p className="text-sm text-softgray font-medium px-4">
                 Ad-free.
               </p>

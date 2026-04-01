@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { AppStoreBadge } from './AppStoreBadge';
 export function Navbar() {
   return (
     <motion.nav
@@ -20,12 +21,7 @@ export function Navbar() {
         <div className="text-2xl font-bold tracking-tight text-charcoal">
           moodern
         </div>
-        <a
-          href="#"
-          className="px-5 py-2.5 bg-charcoal text-white rounded-full font-semibold text-sm hover:bg-charcoal/90 transition-colors shadow-sm">
-          
-          Download
-        </a>
+        <AppStoreBadge size="sm" />
       </div>
     </motion.nav>);
 

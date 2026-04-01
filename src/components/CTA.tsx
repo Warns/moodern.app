@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { AppStoreBadge } from './AppStoreBadge';
 export function CTA() {
   return (
     <section className="py-24 px-6">
@@ -57,12 +58,7 @@ export function CTA() {
               Join thousands of others tracking their mood beautifully. Download
               Moodern today.
             </p>
-            <a
-              href="#"
-              className="inline-block px-10 py-5 bg-white text-mood-green rounded-full font-bold text-xl hover:bg-cream transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1">
-              
-              Download for iOS
-            </a>
+            <AppStoreBadge className="mx-auto" />
           </div>
         </motion.div>
       </div>
