@@ -106,7 +106,7 @@ export function Hero() {
               }}
               animate={{
                 opacity: 1,
-                x: -80,
+                x: isLg ? -80 : -60,
                 rotate: isLg ? -12 : -10
               }}
               transition={{
@@ -128,7 +128,7 @@ export function Hero() {
               }}
               animate={{
                 opacity: 1,
-                x: 80,
+                x: isLg ? 80 : 60,
                 rotate: isLg ? 12 : 10
               }}
               transition={{
