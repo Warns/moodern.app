@@ -15,18 +15,16 @@ export function Footer() {
         </div>
 
         <div className="flex gap-6">
-          <a
+          {/* <a
             href="#"
             className="text-softgray hover:text-charcoal font-medium transition-colors">
-            
             Twitter
           </a>
           <a
             href="#"
             className="text-softgray hover:text-charcoal font-medium transition-colors">
-            
             Instagram
-          </a>
+          </a> */}
           <Link
             to="/privacy"
             className="text-softgray hover:text-charcoal font-medium transition-colors">
