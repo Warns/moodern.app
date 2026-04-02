@@ -24,6 +24,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # Default `/` matches a custom domain at the site root (e.g. moodern.app). For default GitHub URLs
+          # https://<user>.github.io/<repo>/ set repo variable SITE_BASE_PATH to /<repo>/ (slashes included).
+          VITE_BASE_PATH: ${{ vars.SITE_BASE_PATH || '/' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
