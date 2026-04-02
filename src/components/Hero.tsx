@@ -1,4 +1,4 @@
-import React from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { AppStoreBadge } from './AppStoreBadge';
 const IMAGES = {
@@ -8,8 +8,20 @@ const IMAGES = {
   red: "/hero-angry.webp"
 };
 export function Hero() {
+  const [isLg, setIsLg] = useState(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(min-width: 1024px)').matches
+  );
+  useLayoutEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const sync = () => setIsLg(mq.matches);
+    sync();
+    mq.addEventListener('change', sync);
+    return () => mq.removeEventListener('change', sync);
+  }, []);
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section className="relative overflow-visible pt-32 pb-20 lg:overflow-hidden lg:pt-48 lg:pb-32">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
           {/* Text Content */}
@@ -26,7 +38,7 @@ export function Hero() {
               duration: 0.6,
               delay: 0.1
             }}
-            className="flex-1 text-center lg:text-left z-10">
+            className="z-10 flex-1 text-center lg:py-0 lg:text-left">
             
             <h1 className="text-5xl lg:text-7xl font-extrabold text-charcoal leading-[1.1] mb-6 tracking-tight">
               Track your mood, <br className="hidden lg:block" />
@@ -46,30 +58,30 @@ export function Hero() {
           </motion.div>
 
           {/* Fanned Images */}
-          <div className="flex-1 relative w-full max-w-md lg:max-w-none h-[500px] lg:h-[600px] flex justify-center items-center perspective-1000">
+          <div className="relative flex h-[500px] max-w-md flex-1 max-lg:pb-[200px] max-lg:pt-[200px] w-full items-center justify-center perspective-1000 lg:max-w-none lg:py-0 lg:h-[600px]">
             {/* Back Image (Red) - Behind everything */}
             <motion.div
               initial={{
                 opacity: 0,
-                x: 120,
+                x: isLg ? 120 : 48,
                 rotate: 0
               }}
               animate={{
                 opacity: 1,
-                x: -100,
-                rotate: -18
+                x: isLg ? -100 : 0,
+                rotate: isLg ? -24 : -22
               }}
               transition={{
                 duration: 0.8,
                 delay: 0.2,
                 type: 'spring'
               }}
-              className="absolute w-[200px] lg:w-[240px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 z-0">
+              className="absolute max-lg:inset-x-auto max-lg:left-[-142px] max-lg:mx-0 h-[466px] w-[220px] lg:inset-x-auto lg:left-[88px] lg:mx-0 lg:h-auto lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 z-0">
               
               <img
                 src={IMAGES.red}
                 alt="Angry mood"
-                className="w-full h-auto" />
+                className="h-full w-full object-cover lg:h-[545px]" />
               
             </motion.div>
 
@@ -83,7 +95,7 @@ export function Hero() {
               animate={{
                 opacity: 1,
                 x: -80,
-                rotate: -12
+                rotate: isLg ? -12 : -10
               }}
               transition={{
                 duration: 0.8,
@@ -105,14 +117,14 @@ export function Hero() {
               animate={{
                 opacity: 1,
                 x: 80,
-                rotate: 12
+                rotate: isLg ? 12 : 10
               }}
               transition={{
                 duration: 0.8,
                 delay: 0.4,
                 type: 'spring'
               }}
-              className="absolute w-[220px] lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 z-20">
+              className="absolute max-lg:left-[142px] max-lg:right-auto w-[220px] lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 z-20">
               
               <img
                 src={IMAGES.yellow}

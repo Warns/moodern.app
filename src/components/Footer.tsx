@@ -33,10 +33,11 @@ export function Footer() {
             Privacy
           </Link>
           <a
-            href="#"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd4NRSck8w7KyAvQVwbGRcI9WZehpfUZB_iJeyaiHByNrd4dQ/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-softgray hover:text-charcoal font-medium transition-colors">
-            
-            Terms
+            Contact
           </a>
         </div>
       </div>

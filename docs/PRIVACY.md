@@ -92,9 +92,3 @@ Your mood data is protected by **standard iOS protections** for app sandboxing a
 ## Changes to this policy
 
 We may update this policy when the App changes. The **“Last updated”** date at the top will change when we do. Continued use of the App after an update means you accept the revised policy, except where applicable law requires otherwise.
-
----
-
-## Contact
-
-For privacy questions about Moodern, contact: **[INSERT CONTACT EMAIL OR WEB FORM]**
