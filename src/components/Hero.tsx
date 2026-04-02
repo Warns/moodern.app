@@ -33,7 +33,7 @@ export function Hero() {
     return () => mq.removeEventListener('change', sync);
   }, []);
   return (
-    <section className="relative overflow-visible pt-32 pb-20 lg:overflow-hidden lg:pt-48 lg:pb-32">
+    <section className="relative overflow-visible pt-24 pb-14 lg:overflow-hidden lg:pt-[150px] lg:pb-[100px]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
           {/* Text Content */}
@@ -50,7 +50,7 @@ export function Hero() {
               duration: 0.6,
               delay: 0.1
             }}
-            className="z-10 flex-1 text-center lg:py-0 lg:text-left">
+            className="z-10 flex-1 pb-5 text-center lg:pt-0 lg:text-left">
             
             <h1 className="text-5xl lg:text-7xl font-extrabold text-charcoal leading-[1.1] mb-6 tracking-tight">
               Track your mood, <br className="hidden lg:block" />
