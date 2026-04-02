@@ -13,9 +13,21 @@ export function Hero() {
       typeof window !== 'undefined' &&
       window.matchMedia('(min-width: 1024px)').matches
   );
+  const [isXl, setIsXl] = useState(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(min-width: 1280px)').matches
+  );
   useLayoutEffect(() => {
     const mq = window.matchMedia('(min-width: 1024px)');
     const sync = () => setIsLg(mq.matches);
+    sync();
+    mq.addEventListener('change', sync);
+    return () => mq.removeEventListener('change', sync);
+  }, []);
+  useLayoutEffect(() => {
+    const mq = window.matchMedia('(min-width: 1280px)');
+    const sync = () => setIsXl(mq.matches);
     sync();
     mq.addEventListener('change', sync);
     return () => mq.removeEventListener('change', sync);
@@ -63,12 +75,12 @@ export function Hero() {
             <motion.div
               initial={{
                 opacity: 0,
-                x: isLg ? 120 : 48,
+                x: isXl ? 120 : 0,
                 rotate: 0
               }}
               animate={{
                 opacity: 1,
-                x: isLg ? -100 : 0,
+                x: isXl ? -100 : 0,
                 rotate: isLg ? -24 : -22
               }}
               transition={{
@@ -76,7 +88,7 @@ export function Hero() {
                 delay: 0.2,
                 type: 'spring'
               }}
-              className="absolute max-lg:inset-x-auto max-lg:left-[-142px] max-lg:mx-0 h-[466px] w-[220px] lg:inset-x-auto lg:left-[88px] lg:mx-0 lg:h-auto lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 z-0">
+              className="absolute max-xl:inset-x-auto max-xl:left-0 max-xl:mx-0 h-[466px] w-[220px] xl:inset-x-auto xl:left-[88px] xl:mx-0 lg:h-auto lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10 z-0">
               
               <img
                 src={IMAGES.red}
@@ -124,7 +136,7 @@ export function Hero() {
                 delay: 0.4,
                 type: 'spring'
               }}
-              className="absolute max-lg:left-[142px] max-lg:right-auto w-[220px] lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 z-20">
+              className="absolute w-[220px] lg:w-[260px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 z-20">
               
               <img
                 src={IMAGES.yellow}
