@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 export function Footer() {
   return (
     <footer className="py-12 border-t border-charcoal/10 bg-cream">
@@ -25,12 +27,11 @@ export function Footer() {
             
             Instagram
           </a>
-          <a
-            href="#"
+          <Link
+            to="/privacy"
             className="text-softgray hover:text-charcoal font-medium transition-colors">
-            
             Privacy
-          </a>
+          </Link>
           <a
             href="#"
             className="text-softgray hover:text-charcoal font-medium transition-colors">

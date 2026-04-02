@@ -1,21 +1,13 @@
 import React from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Features } from './components/Features';
-import { HowItWorks } from './components/HowItWorks';
-import { CTA } from './components/CTA';
-import { Footer } from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { PrivacyPage } from './pages/PrivacyPage';
+
 export function App() {
   return (
-    <div className="min-h-screen font-sans selection:bg-mood-green/30 selection:text-charcoal">
-      <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <HowItWorks />
-        <CTA />
-      </main>
-      <Footer />
-    </div>);
-
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
+    </Routes>
+  );
 }
