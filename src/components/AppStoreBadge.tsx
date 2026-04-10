@@ -1,6 +1,9 @@
+const DEFAULT_APP_STORE_URL =
+  "https://apps.apple.com/us/app/moodern-daily-mood-tracker/id6761544001";
+
 const APP_STORE_URL =
   (import.meta as ImportMeta & { env: Record<string, string> }).env
-    .VITE_APP_STORE_URL ?? "#";
+    .VITE_APP_STORE_URL ?? DEFAULT_APP_STORE_URL;
 
 type AppStoreBadgeProps = {
   className?: string;
